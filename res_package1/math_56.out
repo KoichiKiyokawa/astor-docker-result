@@ -1,0 +1,969 @@
+Determine revision date.................................................... OK
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.country=US -Duser.language=en
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException:  (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.RollingFileAppender.setFile(RollingFileAppender.java:207)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.apache.log4j.Logger.getLogger(Logger.java:117)
+	at fr.inria.astor.core.setup.ConfigurationProperties.<clinit>(ConfigurationProperties.java:16)
+	at fr.inria.main.AbstractMain.<clinit>(AbstractMain.java:99)
+2019-09-13 01:13:26,376 INFO fr.inria.astor.core.setup.ProjectConfiguration - Version of the JVM used: 1.7.0_181
+2019-09-13 01:13:26,377 INFO main - Java version of the JDK used to run tests: 1.7.0_181
+2019-09-13 01:13:26,377 INFO main - The compliance of the JVM is:  7
+2019-09-13 01:13:26,379 INFO main - command line arguments: [-mode  jgenprog  -location  .  -id  Math-56  -failing  org.apache.commons.math.util.MultidimensionalCounterTest  -jvm4testexecution  /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/  -jvm4evosuitetestexecution  /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/  -maxgen  1000000  -maxtime  120  -stopfirst  true  -seed  0  -scope  package  -population  1  -javacompliancelevel  5  -srcjavafolder  src/main/java/  -srctestfolder  src/test/java/  -binjavafolder  target/classes/  -bintestfolder  target/test-classes/  -parameters  x:x  -dependencies  /script/jGenProg_Defects4J_Math_56/target/classes/:/script/jGenProg_Defects4J_Math_56/target/test-classes/:/defects4j/framework/projects/lib/junit-4.11.jar]
+2019-09-13 01:13:26,381 INFO fr.inria.main.evolution.AstorMain - Running Astor on a JDK at /usr/lib/jvm/java-8-openjdk-amd64/jre
+[INFO ] fr.inria.main.AbstractMain.determineSourceFolders(AbstractMain.java:960) - Source folders: [/script/jGenProg_Defects4J_Math_56/./src/main/java]
+[INFO ] fr.inria.main.AbstractMain.determineSourceFolders(AbstractMain.java:979) - Source Test folders: [/script/jGenProg_Defects4J_Math_56/./src/test/java]
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.calculateSuspicious(GZoltarFaultLocalization.java:74) - -Executing Gzoltar classpath: /script/jGenProg_Defects4J_Math_56/./output_astor/AstorMain-Math-56//bin//default from 524 classes with test cases
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:154) - Gzoltar fault localization: min susp value parameter: 0.1
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:174) - -gz-Adding classpath: [/script/jGenProg_Defects4J_Math_56/./output_astor/AstorMain-Math-56//bin//default, /script/jGenProg_Defects4J_Math_56/target/classes/, /script/jGenProg_Defects4J_Math_56/target/test-classes/, /defects4j/framework/projects/lib/junit-4.11.jar]
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:214) - Test failt: org.apache.commons.math.util.MultidimensionalCounterTest#testIterationConsistency
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:214) - Test failt: org.apache.commons.math.util.FastMathTest#checkMissingFastMathClasses
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:226) - Gzoltar Test Result Total:2400, fails: 2, GZoltar suspicious 19660, with positive susp 129
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:234) - nr test results 2400
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:289) - Gzoltar found: 45 with susp > 0.1, we consider: 45
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.calculateSuspicious(AstorCoreEngine.java:955) - Setting up the max to 1431730 milliseconds (1431 sec)
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initPopulation(AstorCoreEngine.java:709) - 
+---- Creating spoon model
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initModel(AstorCoreEngine.java:801) - Creating model,  Code location from working folder: /script/jGenProg_Defects4J_Math_56/./src/main/java
+[INFO ] fr.inria.astor.core.manipulation.MutationSupporter.buildModel(MutationSupporter.java:66) - building model: /script/jGenProg_Defects4J_Math_56/./src/main/java, compliance level: 5
+[INFO ] fr.inria.astor.core.manipulation.MutationSupporter.buildModel(MutationSupporter.java:80) - Classpath (Dependencies) for building SpoonModel: [/script/jGenProg_Defects4J_Math_56/target/classes/, /script/jGenProg_Defects4J_Math_56/target/test-classes/, /defects4j/framework/projects/lib/junit-4.11.jar]
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initModel(AstorCoreEngine.java:836) - Number of CtTypes created: 499
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initPopulation(AstorCoreEngine.java:713) - 
+---- Initial suspicious size: 45
+[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createProgramInstance(ProgramVariantFactory.java:134) - Total suspicious from FL: 45,  42
+[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createProgramInstance(ProgramVariantFactory.java:143) - Total ModPoint created: 42
+[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createInitialPopulation(ProgramVariantFactory.java:82) - Creating program variant #1, [Variant id: 1, #gens: 42, #ops: 0, parent:-]
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.setFitnessOfPopulation(AstorCoreEngine.java:754) - The original fitness is : 1.0
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:66) - ----------------------------
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:67) - ---Configuration properties:---Execution values
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:alternativecompliancelevel= 8
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:ignoredTestCases= 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:workingDirectory= /script/jGenProg_Defects4J_Math_56/./output_astor
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:manipulatesuper= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:validation= process
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:jvm4testexecution= /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:operatorspace= irr-statements
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:disablelog= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:binjavafolder= target/classes/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:synthesis_depth= 3
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:gzoltartestpackagetoexclude= junit.framework
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:skipfitnessinitialpopulation= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evosuiteresultfolder= evosuite
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:flthreshold= 0.1
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:regressionforfaultlocalization= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:collectonlyusedmethod= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:preservelinenumbers= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:tmax2= 1431730
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:tmax1= 10000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:probagenmutation= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:nomodificationconvergence= 100
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:diff_type= relative
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:targetelementprocessor= statements
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:srctestfolder= src/test/java/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:forceExecuteRegression= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:clusteringfilename= clustering.csv
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:failing= org.apache.commons.math.util.MultidimensionalCounterTest
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:logtestexecution= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evo_buggy_class= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:numberExecutions= 1
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxnumbersolutions= 1000000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evo_affected_by_op= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:population= 1
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:considerzerovaluesusp= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxCombinationVariableLimit= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:loglevel= INFO
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:savesolution= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:javacompliancelevel= 5
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:x= x
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:uniqueoptogen= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:gzoltarpackagetonotinstrument= junit.framework
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:projectIdentifier= Math-56
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:modificationpointnavigation= weight
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:stopfirst= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:multipointmodification= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:elementsToMutate= 10
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:jsonoutputname= astor_output
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evoDSE= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:bintestfolder= target/test-classes/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:testbystep= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:version-location= ./math-version/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:reintroduce= PARENTS:ORIGINAL
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:executorjar= ./lib/jtestex7.jar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxGeneration= 1000000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:max_synthesis_step= 10000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:projectinfocommand= com.github.tdurieux:project-config-maven-plugin:info
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxVarCombination= 1000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxtime= 120
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:jvmversion= 1.7.0_181
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:commandTrunk= 50000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:faultlocalization= gzoltar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:resetmodel= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxsuspcandidates= 1000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:mode= jgenprog
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:learningdir= 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:jvm4evosuitetestexecution= /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:filterfaultlocalization= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:mutationrate= 1 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:pathToMVNRepository= 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:resourcesfolder= /src/main/resources:/src/test/resources:
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:timezone= America/Los_Angeles
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:runjava7code= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evoRunOnBuggyClass= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:compiler= fr.inria.astor.core.manipulation.bytecode.compiler.SpoonClassCompiler
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:limitbysuspicious= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:logsattemps= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:dependenciespath= /script/jGenProg_Defects4J_Math_56/target/classes/:/script/jGenProg_Defects4J_Math_56/target/test-classes/:/defects4j/framework/projects/lib/junit-4.11.jar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:logpatternlayout= [%-5p] %l - %m%n
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:packageToInstrument= 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:skipfaultlocalization= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:scope= package
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:transformingredient= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:fitnessfunction= fr.inria.astor.core.solutionsearch.population.TestCaseFitnessFunction
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxnumvariablesperingredient= 10
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:parsesourcefromoriginal= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:pvariantfoldername= variant-
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:savespoonmodelondisk= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:srcjavafolder= src/main/java/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:populationcontroller= fr.inria.astor.core.solutionsearch.population.TestCaseBasedFitnessPopulationController
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:ignoreflakyinfl= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:cleantemplates= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:applyCrossover= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxmodificationpoints= 1000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:duplicateingredientsinspace= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:metid= 0
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:saveall= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:seed= 0
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:savecompletepatched= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:resetoperations= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:processoutputinfile= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:location= .
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:probabilistictransformation= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:overridemaxtime= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:outputjsonresult= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:allpoints= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:bugId= 280
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evosuitetimeout= 120
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxtimefactor= 10
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:nrPlaceholders= 1
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:forcesubprocesskilling= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:71) - ----------------------------
+[INFO ] fr.inria.astor.core.solutionsearch.EvolutionarySearchEngine.startEvolution(EvolutionarySearchEngine.java:40) - 
+----Starting Solution Search
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 791
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 1063
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 1110
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 1472
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 1879
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 2016
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 2108
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 2965
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 3867
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 5129
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 5311
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 5403
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 5585
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 7612
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 8649
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 8876
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 9103
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 10995
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 11762
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 12259
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13116
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13658
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13930
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 14652
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 15644
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 15961
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 16143
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 16685
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 17272
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 18444
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 20561
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 20788
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 21330
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 21377
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 21739
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 21921
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 22823
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 23230
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 23277
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24224
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24406
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24498
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24590
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24952
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 25899
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 25946
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 26038
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 26445
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 26537
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 27124
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 28971
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 30143
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 31180
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 31542
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 31949
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 32851
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 33393
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 33665
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 34342
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 34704
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 34886
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 36283
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 36960
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 37007
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 37144
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 37731
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 38228
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 39040
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 39537
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 39764
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 40306
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 41208
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 42965
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 43777
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 43869
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 44321
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 44413
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 44505
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 44552
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 46039
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 46536
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 46898
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 47125
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 47352
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 47714
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 48211
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 48978
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 49385
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 49882
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 50064
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 50696
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 52138
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 53535
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 53762
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 53899
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 54036
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 54488
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 55345
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 55392
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 57149
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 57376
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 58503
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 58550
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 59362
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 59409
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 59501
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 60448
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 60765
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 61217
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 61624
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 61896
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 62393
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 63205
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 64647
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 64919
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 65056
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 65148
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 65735
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 65962
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 68979
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 69746
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 70288
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 72180
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 72767
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 73624
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 73761
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 73808
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 74035
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 74082
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 74309
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 77146
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 77778
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 78095
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 78682
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 79404
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 80711
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 81883
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 81975
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 82607
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 85084
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 85626
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 85718
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 85900
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 86487
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 87974
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 89371
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 90363
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 91220
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 91492
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 92034
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 92216
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 92713
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 92805
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 95282
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 95329
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 95556
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 96548
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 97900
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 98037
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 2173
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 3031
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 3348
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 3440
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 4793
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 5609
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 5701
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 7503
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 8406
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 10166
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 11024
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 11206
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 11568
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13148
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13420
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13647
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13785
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 15049
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 15727
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 15864
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 16408
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 16861
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 17854
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 18306
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 18443
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 19796
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 20203
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 20430
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 21381
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 22060
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 22242
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 22514
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 23869
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24413
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24642
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24779
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24916
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 25009
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 25776
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 26953
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 28351
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 28713
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 29301
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 31420
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 32189
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 32912
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 33816
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 34946
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 35263
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 35400
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 36257
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 38560
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 39012
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 39285
+[ERROR] fr.inria.astor.core.solutionsearch.AstorCoreEngine.validateReversedOriginalVariant(AstorCoreEngine.java:359) - Error variant :7260 the model was not the same from the original after this generation (see Diff in debug level)
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 41002
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 41094
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 41232
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 41324
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 41461
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 42183
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 42860
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 43223
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 43540
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 43722
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 45530
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 46794
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 47429
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 48017
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 48335
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 50411
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 50774
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 51136
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 51363
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 52446
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 52493
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 53125
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 53352
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 54844
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 54891
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 54983
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 55617
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 56114
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 56251
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 56748
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 59501
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 61260
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 62164
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 62391
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 63204
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 63657
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 64785
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 65690
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 65738
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 66551
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 67003
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 67095
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 67277
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 67594
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 67956
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 68994
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 69041
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 69268
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 70171
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 70849
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 71391
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 71528
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 73422
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 76355
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 76492
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 76674
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 76811
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 77534
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 78663
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 78981
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 79028
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 79751
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 79798
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 80025
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 80748
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 80885
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 81517
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 82332
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 82740
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 83642
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 83959
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 85132
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 85314
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 85496
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 85588
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 86494
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 86856
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 86993
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 87400
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 91005
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 91097
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 91415
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 93042
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 93539
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 93946
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 94578
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 95392
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 95710
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 96342
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 96479
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 96526
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 97205
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 97702
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 436
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 845
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 982
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 1029
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 1664
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 2073
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 3521
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 3568
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 4651
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 4698
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 5967
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 6644
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 7006
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 7549
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 7642
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 8410
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 8909
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 9722
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 10175
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 10762
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 11217
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 11851
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 12439
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13343
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13616
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13665
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13939
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 13986
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 14618
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 15297
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 16068
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 16161
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 17156
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 17474
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 17701
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 17838
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 18789
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 20504
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 20958
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 21275
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 22815
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 23178
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24038
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24584
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 24859
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 25044
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 25631
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 27171
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 28118
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 28165
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 28438
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 29117
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 29390
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 29617
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 30024
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 30116
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 30794
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 31156
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 31430
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 31928
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 32472
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 33738
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:181) - The Process that runs JUnit test cases did not terminate within waitTime of 10 seconds
+[INFO ] fr.inria.astor.core.validation.processbased.LaucherJUnitProcess.killProcess(LaucherJUnitProcess.java:183) - Killed the Process that runs JUnit test cases 34236
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.belowMaxTime(AstorCoreEngine.java:278) - 
+ No more time for operating
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:170) - Time Repair Loop (s): 7206.596
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:172) - generationsexecuted: 6047
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.printFinalStatus(AstorCoreEngine.java:247) - 
+----SUMMARY_EXECUTION---
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:186) - 
+ --SOLUTIONS DESCRIPTION--
+
+
+Astor Output:
+
+General stats:
+EXECUTION_IDENTIFIER=Math-56
+TOTAL_TIME=7206.596
+NR_GENERATIONS=6047
+NR_RIGHT_COMPILATIONS=5080
+NR_FAILLING_COMPILATIONS=967
+NR_ERRONEOUS_VARIANCES=null
+NR_FAILING_VALIDATION_PROCESS=null
+OUTPUT_STATUS=TIME_OUT
+
+Patch stats:
+
+[INFO ] fr.inria.main.evolution.AstorMain.run(AstorMain.java:200) - Time Total(s): 7888.86
+
+
+Node: 392d02ec5a8b
+
+
+
+Date: Fri Sep 13 03:24:55 EDT 2019
+
+cd /script/jGenProg_Defects4J_Math_56;
+export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8 -Duser.language=en-US -Duser.country=US -Duser.language=en";
+TZ="America/New_York"; export TZ;
+export PATH="/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/:$PATH";
+export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/";
+java -Xmx4048m -cp /script/libs/jtestex7.jar:/astor/target/astor-0.0.2-SNAPSHOT-jar-with-dependencies.jar fr.inria.main.evolution.AstorMain \
+	-mode jgenprog \
+	-location . \
+	-id Math-56 \
+	-failing org.apache.commons.math.util.MultidimensionalCounterTest \
+	-jvm4testexecution /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/ \
+	-jvm4evosuitetestexecution /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/ \
+	-maxgen 1000000 \
+	-maxtime 120 \
+	-stopfirst true \
+	-seed 0 \
+	-scope package \
+	-population 1 \
+	-javacompliancelevel 5 \
+	-srcjavafolder src/main/java/ \
+	-srctestfolder src/test/java/ \
+	-binjavafolder target/classes/ \
+	-bintestfolder target/test-classes/ \
+	-parameters x:x \
+	-dependencies /script/jGenProg_Defects4J_Math_56/target/classes/:/script/jGenProg_Defects4J_Math_56/target/test-classes/:/defects4j/framework/projects/lib/junit-4.11.jar;
+	echo "\n\nNode: `hostname`\n";
+	echo "\n\nDate: `date`\n";
+
