@@ -1,0 +1,1459 @@
+Determine revision date.................................................... OK
+Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.country=US -Duser.language=en
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException:  (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.RollingFileAppender.setFile(RollingFileAppender.java:207)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.apache.log4j.Logger.getLogger(Logger.java:117)
+	at fr.inria.astor.core.setup.ConfigurationProperties.<clinit>(ConfigurationProperties.java:16)
+	at fr.inria.main.AbstractMain.<clinit>(AbstractMain.java:100)
+2019-12-01 20:54:55,961 INFO fr.inria.astor.core.setup.ProjectConfiguration - Version of the JVM used: 1.7.0_181
+2019-12-01 20:54:55,963 INFO main - Java version of the JDK used to run tests: 1.7.0_181
+2019-12-01 20:54:55,963 INFO main - The compliance of the JVM is:  7
+2019-12-01 20:54:55,966 INFO main - command line arguments: [-mode  jgenprog  -location  .  -id  Math-50  -failing  org.apache.commons.math.analysis.solvers.RegulaFalsiSolverTest  -jvm4testexecution  /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/  -jvm4evosuitetestexecution  /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/  -maxgen  1000000  -maxtime  120  -stopfirst  true  -seed  0  -scope  package  -population  1  -javacompliancelevel  5  -srcjavafolder  src/main/java/  -srctestfolder  src/test/java/  -binjavafolder  target/classes/  -bintestfolder  target/test-classes/  -parameters  mode:purpose  -dependencies  /script/jGenProg_Defects4J_Math_50/target/classes/:/script/jGenProg_Defects4J_Math_50/target/test-classes/:/defects4j/framework/projects/lib/junit-4.11.jar]
+2019-12-01 20:54:55,968 INFO fr.inria.main.evolution.AstorMain - Running Astor on a JDK at /usr/lib/jvm/java-8-openjdk-amd64/jre
+[INFO ] fr.inria.main.AbstractMain.determineSourceFolders(AbstractMain.java:975) - Source folders: [/script/jGenProg_Defects4J_Math_50/./src/main/java]
+[INFO ] fr.inria.main.AbstractMain.determineSourceFolders(AbstractMain.java:994) - Source Test folders: [/script/jGenProg_Defects4J_Math_50/./src/test/java]
+[INFO ] fr.inria.main.evolution.AstorMain.createEngine(AstorMain.java:108) - mode is Purpose
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.resolveTestsToRun(AstorCoreEngine.java:1311) - Test retrieved from classes: 570
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.calculateSuspicious(GZoltarFaultLocalization.java:74) - -Executing Gzoltar classpath: /script/jGenProg_Defects4J_Math_50/./output_astor/AstorMain-Math-50//bin//default from 570 classes with test cases
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:154) - Gzoltar fault localization: min susp value parameter: 0.1
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:174) - -gz-Adding classpath: [/script/jGenProg_Defects4J_Math_50/./output_astor/AstorMain-Math-50//bin//default, /script/jGenProg_Defects4J_Math_50/target/classes/, /script/jGenProg_Defects4J_Math_50/target/test-classes/, /defects4j/framework/projects/lib/junit-4.11.jar]
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:214) - Test failt: org.apache.commons.math.analysis.solvers.RegulaFalsiSolverTest#testIssue631
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:214) - Test failt: org.apache.commons.math.util.FastMathTest#checkMissingFastMathClasses
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:226) - Gzoltar Test Result Total:2952, fails: 2, GZoltar suspicious 23539, with positive susp 160
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:234) - nr test results 2952
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:289) - Gzoltar found: 42 with susp > 0.1, we consider: 42
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.calculateSuspicious(AstorCoreEngine.java:898) - Setting up the max to 2192960 milliseconds (2192 sec)
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initPopulation(AstorCoreEngine.java:709) - 
+---- Creating spoon model
+[INFO ] fr.inria.astor.core.manipulation.MutationSupporter.buildSpoonModel(MutationSupporter.java:240) - Creating model,  Code location from working folder: /script/jGenProg_Defects4J_Math_50/./src/main/java
+[INFO ] fr.inria.astor.core.manipulation.MutationSupporter.buildModel(MutationSupporter.java:68) - building model: /script/jGenProg_Defects4J_Math_50/./src/main/java, compliance level: 5
+[INFO ] fr.inria.astor.core.manipulation.MutationSupporter.buildModel(MutationSupporter.java:82) - Classpath (Dependencies) for building SpoonModel: [/script/jGenProg_Defects4J_Math_50/target/classes/, /script/jGenProg_Defects4J_Math_50/target/test-classes/, /defects4j/framework/projects/lib/junit-4.11.jar]
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initModel(AstorCoreEngine.java:779) - Number of CtTypes created: 569
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initPopulation(AstorCoreEngine.java:713) - 
+---- Initial suspicious size: 42
+[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createProgramInstance(ProgramVariantFactory.java:134) - Total suspicious from FL: 42,  37
+[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createProgramInstance(ProgramVariantFactory.java:143) - Total ModPoint created: 37
+[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createInitialPopulation(ProgramVariantFactory.java:82) - Creating program variant #1, [Variant id: 1, #gens: 37, #ops: 0, parent:-]
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.setFitnessOfPopulation(AstorCoreEngine.java:754) - The original fitness is : 1.0
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:66) - ----------------------------
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:67) - ---Configuration properties:---Execution values
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:lastJUnitVersion= ./examples/libs/junit-4.11.jar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:alternativecompliancelevel= 8
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:ignoredTestCases= 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:workingDirectory= /script/jGenProg_Defects4J_Math_50/./output_astor
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:manipulatesuper= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:validation= process
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:jvm4testexecution= /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:operatorspace= irr-statements
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:disablelog= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:binjavafolder= target/classes/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:synthesis_depth= 3
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:gzoltartestpackagetoexclude= junit.framework
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:skipfitnessinitialpopulation= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evosuiteresultfolder= evosuite
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:flthreshold= 0.1
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:regressionforfaultlocalization= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:collectonlyusedmethod= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:preservelinenumbers= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:tmax2= 2192960
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:tmax1= 10000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:probagenmutation= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:nomodificationconvergence= 100
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:diff_type= relative
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:targetelementprocessor= statements
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:srctestfolder= src/test/java/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:forceExecuteRegression= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:clusteringfilename= clustering.csv
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:failing= org.apache.commons.math.analysis.solvers.RegulaFalsiSolverTest
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:logtestexecution= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evo_buggy_class= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:numberExecutions= 1
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxnumbersolutions= 1000000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evo_affected_by_op= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:population= 1
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:considerzerovaluesusp= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxCombinationVariableLimit= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:loglevel= INFO
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:savesolution= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:javacompliancelevel= 5
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:uniqueoptogen= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:gzoltarpackagetonotinstrument= junit.framework
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:projectIdentifier= Math-50
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:modificationpointnavigation= weight
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:stopfirst= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:multipointmodification= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:elementsToMutate= 10
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:jsonoutputname= astor_output
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evoDSE= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:bintestfolder= target/test-classes/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:testbystep= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:version-location= ./math-version/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:reintroduce= PARENTS:ORIGINAL
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:executorjar= ./lib/jtestex7.jar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxGeneration= 1000000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:max_synthesis_step= 10000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:projectinfocommand= com.github.tdurieux:project-config-maven-plugin:info
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxVarCombination= 1000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxtime= 120
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evosuitejar= ./lib/evosuite-master-1.0.4-SNAPSHOT.jar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:jvmversion= 1.7.0_181
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:commandTrunk= 50000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:faultlocalization= gzoltar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:resetmodel= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxsuspcandidates= 1000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:mode= purpose
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:learningdir= 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:jvm4evosuitetestexecution= /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:filterfaultlocalization= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:mutationrate= 1 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:pathToMVNRepository= 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:resourcesfolder= /src/main/resources:/src/test/resources:
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:timezone= America/Los_Angeles
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:runjava7code= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evoRunOnBuggyClass= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:compiler= fr.inria.astor.core.manipulation.bytecode.compiler.SpoonClassCompiler
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:limitbysuspicious= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:logsattemps= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:dependenciespath= /script/jGenProg_Defects4J_Math_50/target/classes/:/script/jGenProg_Defects4J_Math_50/target/test-classes/:/defects4j/framework/projects/lib/junit-4.11.jar
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:logpatternlayout= [%-5p] %l - %m%n
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:packageToInstrument= 
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:skipfaultlocalization= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:scope= package
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:transformingredient= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:fitnessfunction= fr.inria.astor.core.solutionsearch.population.TestCaseFitnessFunction
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxnumvariablesperingredient= 10
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:parsesourcefromoriginal= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:pvariantfoldername= variant-
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:savespoonmodelondisk= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:srcjavafolder= src/main/java/
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:populationcontroller= fr.inria.astor.core.solutionsearch.population.TestCaseBasedFitnessPopulationController
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:ignoreflakyinfl= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:cleantemplates= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:applyCrossover= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxmodificationpoints= 1000
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:duplicateingredientsinspace= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:metid= 0
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:continuewhenmodelfail= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:saveall= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:seed= 0
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:savecompletepatched= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:resetoperations= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:processoutputinfile= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:location= .
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:probabilistictransformation= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:overridemaxtime= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:outputjsonresult= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:allpoints= false
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:bugId= 280
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:evosuitetimeout= 120
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:maxtimefactor= 10
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:nrPlaceholders= 1
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:forcesubprocesskilling= true
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:71) - ----------------------------
+[INFO ] fr.inria.astor.core.solutionsearch.EvolutionarySearchEngine.startEvolution(EvolutionarySearchEngine.java:40) - 
+----Starting Solution Search
+21:01:28.071 [main] INFO  org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+21:01:29.867 [main] INFO  org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for NativeOps: 6
+21:01:30.753 [main] INFO  org.nd4j.nativeblas.Nd4jBlas - Number of threads used for BLAS: 6
+21:01:30.759 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+21:01:30.759 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Cores: [48]; Memory: [3.5GB];
+21:01:30.760 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Blas vendor: [MKL]
+21:01:31.464 [main] INFO  o.d.m.e.loader.WordVectorSerializer - Projected memory use for model: [3.96 MB]
+21:01:35.174 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:35.175 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:35.186 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:01:38.008 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:38.008 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:38.010 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:01:41.284 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:41.285 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:41.287 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:01:44.285 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:44.286 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:44.288 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:01:47.234 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:47.235 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:47.236 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:01:50.149 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:50.150 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:50.152 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:01:53.085 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:53.085 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:53.087 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:01:55.377 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:55.381 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:55.382 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:01:57.651 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:57.652 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:57.653 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:01:59.895 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:01:59.896 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:01:59.898 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:02.030 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:02.031 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:02.033 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:04.745 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:04.747 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:04.750 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:07.678 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:07.679 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:07.682 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:10.633 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:10.634 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:10.636 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:13.494 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:13.495 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:13.496 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:15.860 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:15.860 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:15.861 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:18.548 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:18.548 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:18.550 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:20.708 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:20.708 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:20.709 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:22.638 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:22.638 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:22.640 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:24.927 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:24.928 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:24.929 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:27.219 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:27.220 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:27.222 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:29.856 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:29.857 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:29.859 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:32.634 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:32.634 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:32.636 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:35.246 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:35.247 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:35.249 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:37.585 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:37.585 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:37.586 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:40.441 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:40.442 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:40.444 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:42.975 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:42.976 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:42.978 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:45.630 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:45.631 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:45.632 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:48.273 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:48.274 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:48.275 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:50.272 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:50.272 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:50.273 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:52.573 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:52.574 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:52.575 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:54.550 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:54.550 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:54.552 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:56.748 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:56.749 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:56.751 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:02:59.565 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:02:59.566 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:02:59.568 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:02.396 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:02.397 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:02.398 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:05.117 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:05.118 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:05.120 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:07.512 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:07.513 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:07.514 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:09.559 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:09.560 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:09.561 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:11.580 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:11.581 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:11.582 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:13.962 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:13.963 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:13.965 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:16.032 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:16.033 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:16.034 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:18.004 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:18.005 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:18.006 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:20.098 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:20.098 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:20.099 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:22.386 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:22.387 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:22.388 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:25.149 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:25.150 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:25.152 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:28.044 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:28.045 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:28.047 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:30.215 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:30.215 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:30.216 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:32.200 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:32.201 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:32.202 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:34.410 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:34.411 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:34.413 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:36.791 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:36.791 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:36.793 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:39.343 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:39.343 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:39.345 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:41.787 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:41.788 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:41.789 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:44.275 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:44.276 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:44.288 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:47.618 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:47.619 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:47.620 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:50.343 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:50.344 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:50.345 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:53.246 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:53.247 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:53.248 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:56.205 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:56.205 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:56.206 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:03:58.663 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:03:58.664 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:03:58.665 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:01.006 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:01.006 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:01.008 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:03.646 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:03.646 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:03.648 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:06.005 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:06.005 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:06.006 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:08.694 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:08.694 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:08.700 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:11.812 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:11.813 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:11.815 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:14.954 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:14.955 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:14.956 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:17.806 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:17.807 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:17.809 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:19.994 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:19.994 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:19.995 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:22.737 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:22.738 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:22.739 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:25.427 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:25.427 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:25.428 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:27.837 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:27.837 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:27.838 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:30.067 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:30.067 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:30.069 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:32.063 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:32.063 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:32.065 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:34.375 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:34.375 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:34.376 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:36.536 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:36.536 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:36.538 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:38.813 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:38.814 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:38.815 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:40.995 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:40.996 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:40.997 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:43.188 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:43.189 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:43.191 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:45.582 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:45.582 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:45.583 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:48.133 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:48.133 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:48.135 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:50.817 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:50.821 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:50.822 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:53.214 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:53.214 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:53.215 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:55.709 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:55.710 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:55.711 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:04:58.429 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:04:58.430 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:04:58.430 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:00.494 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:00.495 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:00.498 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:02.543 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:02.544 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:02.545 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:04.560 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:04.560 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:04.562 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:06.877 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:06.877 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:06.879 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:09.063 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:09.064 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:09.065 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:11.150 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:11.150 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:11.151 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:13.379 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:13.380 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:13.381 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:15.436 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:15.437 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:15.438 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:17.793 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:17.794 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:17.795 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:19.981 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:19.982 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:19.983 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:22.606 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:22.606 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:22.607 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:24.835 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:24.836 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:24.837 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:26.769 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:26.770 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:26.770 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:29.084 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:29.085 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:29.086 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:31.592 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:31.592 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:31.593 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:34.028 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:34.029 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:34.030 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:36.635 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:36.636 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:36.637 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:39.406 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:39.406 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:39.407 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:41.675 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:41.675 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:41.676 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:43.988 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:43.988 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:43.989 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:46.172 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:46.173 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:46.174 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:48.597 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:48.597 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:48.598 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:50.998 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:50.998 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:50.999 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:52.993 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:52.993 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:52.995 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:54.959 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:54.959 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:54.960 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:57.064 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:57.065 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:57.066 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:05:59.493 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:05:59.493 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:05:59.495 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:02.466 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:02.466 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:02.468 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:05.113 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:05.113 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:05.115 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:07.344 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:07.344 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:07.345 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:09.509 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:09.509 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:09.511 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:11.675 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:11.676 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:11.677 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:14.156 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:14.157 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:14.158 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:16.654 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:16.655 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:16.656 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:18.762 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:18.763 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:18.764 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:20.852 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:20.852 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:20.853 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:23.176 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:23.177 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:23.178 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:25.358 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:25.359 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:25.360 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:28.031 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:28.034 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:28.036 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:30.660 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:30.660 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:30.662 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:32.853 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:32.854 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:32.855 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:35.497 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:35.497 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:35.498 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:37.567 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:37.568 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:37.569 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:39.786 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:39.786 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:39.787 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:42.159 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:42.159 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:42.160 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:44.571 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:44.571 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:44.572 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:46.588 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:46.588 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:46.589 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:48.755 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:48.756 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:48.757 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:51.127 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:51.127 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:51.128 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:53.431 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:53.432 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:53.433 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:55.714 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:55.715 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:55.716 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:06:57.849 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:06:57.849 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:06:57.850 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:00.001 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:00.002 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:00.003 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:02.138 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:02.138 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:02.139 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:04.698 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:04.699 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:04.701 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:07.568 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:07.568 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:07.570 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:10.288 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:10.288 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:10.290 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:12.860 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:12.860 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:12.861 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:15.092 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:15.092 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:15.093 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:17.315 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:17.316 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:17.317 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:20.049 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:20.050 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:20.051 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:22.246 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:22.247 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:22.248 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:24.928 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:24.929 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:24.930 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:27.620 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:27.620 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:27.621 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:30.386 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:30.387 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:30.388 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:33.057 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:33.057 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:33.058 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:35.094 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:35.094 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:35.095 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:37.120 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:37.120 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:37.121 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:39.289 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:39.289 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:39.290 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:41.787 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:41.788 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:41.789 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:44.369 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:44.370 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:44.371 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:46.968 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:46.969 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:46.970 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:49.507 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:49.507 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:49.509 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:51.899 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:51.899 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:51.901 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:53.989 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:53.990 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:53.991 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:56.291 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:56.291 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:56.292 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:07:58.461 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:07:58.462 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:07:58.463 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:00.537 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:00.538 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:00.539 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:02.524 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:02.525 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:02.526 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:05.103 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:05.103 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:05.104 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:07.995 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:07.995 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:07.997 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:10.757 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:10.758 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:10.759 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:13.412 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:13.413 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:13.414 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:15.747 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:15.752 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:15.754 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:18.682 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:18.682 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:18.683 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:21.283 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:21.283 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:21.284 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:23.946 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:23.947 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:23.948 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:26.243 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:26.244 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:26.245 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:28.728 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:28.728 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:28.729 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:31.213 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:31.214 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:31.216 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:33.803 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:33.803 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:33.805 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:36.327 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:36.328 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:36.329 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:38.296 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:38.296 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:38.297 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:40.483 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:40.484 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:40.485 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:42.925 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:42.925 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:42.926 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:45.245 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:45.245 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:45.247 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:47.610 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:47.610 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:47.612 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:49.935 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:49.936 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:49.937 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:52.349 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:52.350 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:52.351 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:54.584 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:54.584 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:54.585 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:56.692 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:56.692 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:56.693 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:08:59.125 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:08:59.125 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:08:59.126 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:01.570 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:01.571 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:01.572 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:03.868 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:03.868 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:03.869 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:05.870 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:05.871 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:05.872 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:07.893 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:07.893 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:07.895 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:10.264 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:10.264 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:10.265 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:12.629 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:12.629 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:12.630 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:15.025 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:15.025 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:15.026 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:22.955 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:22.956 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:22.957 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:25.602 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:25.602 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:25.603 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:27.710 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:27.710 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:27.711 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:30.153 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:30.153 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:30.154 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:32.408 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:32.409 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:32.411 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:34.799 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:34.799 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:34.801 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:37.102 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:37.102 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:37.103 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:39.469 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:39.470 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:39.472 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:42.094 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:42.094 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:42.095 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:44.485 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:44.486 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:44.487 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:46.576 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:46.576 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:46.577 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:48.587 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:48.587 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:48.588 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:50.735 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:50.736 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:50.737 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:53.111 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:53.111 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:53.112 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:55.280 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:55.281 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:55.282 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:57.309 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:57.309 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:57.310 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:09:59.284 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:09:59.285 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:09:59.286 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:01.520 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:01.521 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:01.523 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:04.008 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:04.009 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:04.011 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:06.612 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:06.613 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:06.614 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:08.603 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:08.604 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:08.605 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:10.718 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:10.718 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:10.719 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:12.672 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:12.672 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:12.677 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:14.774 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:14.775 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:14.776 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:17.232 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:17.232 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:17.233 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:19.421 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:19.421 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:19.422 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:21.463 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:21.464 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:21.465 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:24.061 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:24.062 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:24.063 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:26.773 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:26.774 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:26.775 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:29.195 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:29.195 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:29.197 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:31.643 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:31.644 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:31.645 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:33.976 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:33.977 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:33.978 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:36.375 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:36.375 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:36.377 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:38.459 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:38.460 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:38.460 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:40.905 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:40.906 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:40.907 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:43.107 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:43.108 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:43.109 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:45.196 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:45.197 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:45.198 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:47.195 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:47.197 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:47.198 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:49.288 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:49.289 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:49.290 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:51.603 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:51.603 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:51.605 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:53.863 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:53.864 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:53.865 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:56.049 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:56.050 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:56.051 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:10:58.293 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:10:58.293 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:10:58.295 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:00.339 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:00.339 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:00.340 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:02.618 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:02.618 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:02.619 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:04.761 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:04.761 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:04.762 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:07.007 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:07.008 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:07.009 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:09.354 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:09.355 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:09.356 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:11.460 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:11.461 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:11.462 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:13.590 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:13.591 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:13.592 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:15.878 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:15.878 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:15.879 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:17.920 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:17.921 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:17.922 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:19.982 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:19.982 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:19.983 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:22.116 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:22.117 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:22.118 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:24.468 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:24.468 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:24.470 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:27.169 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:27.169 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:27.170 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:29.832 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:29.833 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:29.834 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:32.094 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:32.095 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:32.096 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:34.530 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:34.531 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:34.532 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:36.820 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:36.820 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:36.821 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:38.972 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:38.973 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:38.975 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:41.583 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:41.583 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:41.584 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:43.782 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:43.782 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:43.783 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:46.108 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:46.109 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:46.110 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:49.018 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:49.018 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:49.020 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:51.629 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:51.629 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:51.630 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:54.292 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:54.293 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:54.294 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:56.482 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:56.482 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:56.483 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:11:58.758 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:11:58.758 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:11:58.759 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:00.937 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:00.938 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:00.939 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:03.626 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:03.627 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:03.630 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:05.878 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:05.878 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:05.879 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:07.989 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:07.989 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:07.990 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:10.289 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:10.290 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:10.291 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:12.784 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:12.784 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:12.785 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:15.072 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:15.074 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:15.075 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:17.460 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:17.460 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:17.462 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:20.190 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:20.191 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:20.192 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:22.449 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:22.450 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:22.451 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:24.452 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:24.452 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:24.453 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:26.526 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:26.526 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:26.527 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:29.020 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:29.020 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:29.022 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:31.198 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:31.198 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:31.200 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:33.178 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:33.178 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:33.180 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:35.146 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:35.147 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:35.148 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:37.509 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:37.510 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:37.511 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:39.877 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:39.877 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:39.878 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:42.076 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:42.076 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:42.077 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:44.272 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:44.272 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:44.274 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:46.301 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:46.301 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:46.302 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:48.348 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:48.348 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:48.349 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:50.471 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:50.471 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:50.472 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:52.567 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:52.568 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:52.569 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:54.806 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:54.807 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:54.808 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:56.895 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:56.896 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:56.897 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:12:59.140 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:12:59.140 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:12:59.141 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:01.192 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:01.193 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:01.194 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:03.175 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:03.176 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:03.177 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:05.300 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:05.301 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:05.302 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:07.313 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:07.313 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:07.315 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:10.014 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:10.014 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:10.016 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:12.884 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:12.885 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:12.886 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:15.173 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:15.173 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:15.176 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:17.800 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:17.801 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:17.802 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:20.606 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:20.607 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:20.608 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:23.320 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:23.321 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:23.323 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:26.041 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:26.041 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:26.042 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:28.215 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:28.215 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:28.217 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:30.826 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:30.826 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:30.827 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:33.052 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:33.052 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:33.053 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:35.626 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:35.626 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:35.627 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:37.788 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:37.789 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:37.790 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:40.215 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:40.216 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:40.217 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:42.611 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:42.612 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:42.613 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:44.690 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:44.690 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:44.691 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:46.693 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:46.693 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:46.694 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:48.921 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:48.921 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:48.922 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:51.112 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:51.113 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:51.114 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:53.196 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:53.196 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:53.197 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:55.393 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:55.394 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:55.395 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:57.354 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:57.354 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:57.355 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:13:59.359 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:13:59.360 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:13:59.361 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:01.329 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:01.329 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:01.330 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:03.544 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:03.544 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:03.545 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:05.653 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:05.653 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:05.654 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:07.975 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:07.975 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:07.977 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:10.041 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:10.041 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:10.042 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:12.021 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:12.022 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:12.023 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:14.033 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:14.034 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:14.035 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:16.112 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:16.113 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:16.114 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:18.199 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:18.199 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:18.201 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:20.391 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:20.391 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:20.392 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:23.060 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:23.060 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:23.061 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:25.774 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:25.774 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:25.775 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:28.322 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:28.322 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:28.323 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:30.500 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:30.501 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:30.502 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:32.815 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:32.815 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:32.816 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:35.100 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:35.101 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:35.102 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:37.846 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:37.847 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:37.848 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:40.254 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:40.255 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:40.256 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:42.546 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:42.547 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:42.548 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:44.800 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:44.800 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:44.801 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:47.164 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:47.164 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:47.165 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:49.808 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:49.809 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:49.810 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:52.025 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:52.026 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:52.028 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:54.474 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:54.475 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:54.476 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:56.555 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:56.555 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:56.557 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:14:59.021 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:14:59.021 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:14:59.022 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:01.486 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:01.489 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:01.490 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:03.637 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:03.637 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:03.638 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:06.036 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:06.037 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:06.038 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:08.297 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:08.297 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:08.298 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:10.397 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:10.397 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:10.398 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:12.467 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:12.468 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:12.469 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:14.596 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:14.596 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:14.597 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:16.596 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:16.596 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:16.597 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:18.697 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:18.697 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:18.698 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:21.291 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:21.292 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:21.292 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:23.889 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:23.890 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:23.891 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:26.365 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:26.365 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:26.366 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:28.605 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:28.605 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:28.606 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:31.026 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:31.027 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:31.028 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:33.418 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:33.419 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:33.420 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:35.775 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:35.775 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:35.777 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:38.159 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:38.159 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:38.161 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:40.799 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:40.800 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:40.801 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:43.183 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:43.183 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:43.184 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:45.643 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:45.643 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:45.644 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:48.426 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:48.427 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:48.428 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:51.217 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:51.217 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:51.218 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:53.537 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:53.537 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:53.538 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:55.818 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:55.818 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:55.819 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:15:58.117 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:15:58.117 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:15:58.118 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:16:00.593 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:16:00.594 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:16:00.595 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:16:03.246 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:16:03.247 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:16:03.248 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:16:05.351 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:16:05.352 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:16:05.353 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:16:07.966 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:16:07.966 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:16:07.967 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:16:10.086 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:16:10.086 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:16:10.087 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:16:12.773 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:16:12.773 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:16:12.775 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:16:15.318 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:16:15.318 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:16:15.319 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+21:16:17.683 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+21:16:17.683 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+21:16:17.684 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.processCreatedVariant(AstorCoreEngine.java:449) - -Found Solution, child variant #2
+[ERROR] fr.inria.astor.core.solutionsearch.AstorCoreEngine.validateReversedOriginalVariant(AstorCoreEngine.java:359) - Error variant :2 the model was not the same from the original after this generation (see Diff in debug level)
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:170) - Time Repair Loop (s): 1034.584
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:172) - generationsexecuted: 1
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.printFinalStatus(AstorCoreEngine.java:247) - 
+----SUMMARY_EXECUTION---
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.printFinalStatus(AstorCoreEngine.java:249) - End Repair Search: Found solution
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.printFinalStatus(AstorCoreEngine.java:250) - Solution stored at: /script/jGenProg_Defects4J_Math_50/./output_astor/AstorMain-Math-50//src/
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:189) - 
+ --SOLUTIONS DESCRIPTION--
+
+ ----
+ProgramVariant 2
+ 
+time(sec)= 1034
+operation: RemoveOp
+location= org.apache.commons.math.analysis.solvers.BaseSecantSolver
+line= 188
+lineSuspiciousness= 0.707
+lineSuspiciousness= 0
+original statement= x0 = 0.5 * ((x0 + x1) - org.apache.commons.math.util.FastMath.max(rtol * org.apache.commons.math.util.FastMath.abs(x1), atol))
+buggy kind= CtAssignmentImpl|CtBlockImpl
+fixed statement= 
+generation= 1
+ingredientScope= -
+validation=|true|0|2952|[]|
+diffpatch=--- /script/jGenProg_Defects4J_Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolverjava
++++ /script/jGenProg_Defects4J_Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolverjava
+@@ -73,10 +73,9 @@
+ 						f0 *= f1 / (f1 + fx);
+ 						break;
+ 					case REGULA_FALSI :
+-						if (x == x1) {
+-							x0 = 0.5 * ((x0 + x1) - org.apache.commons.math.util.FastMath.max(rtol * org.apache.commons.math.util.FastMath.abs(x1), atol));
++						if (x == x1)
+ 							f0 = computeObjectiveValue(x0);
+-						}
++
+ 						break;
+ 					default :
+ 						throw new org.apache.commons.math.exception.MathInternalError();
+
+
+diffpatchoriginal=--- /script/jGenProg_Defects4J_Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolverjava
++++ /script/jGenProg_Defects4J_Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolverjava
+@@ -184,10 +184,10 @@
+ 						break;
+ 					case REGULA_FALSI :
+ 
+-						if (x == x1) {
+-							x0 = 0.5 * ((x0 + x1) - org.apache.commons.math.util.FastMath.max(rtol * org.apache.commons.math.util.FastMath.abs(x1), atol));
++						if (x == x1)
++
+ 							f0 = computeObjectiveValue(x0);
+-						}
++
+ 						break;
+ 					default :
+ 
+
+
+
+Astor Output:
+
+General stats:
+EXECUTION_IDENTIFIER=Math-50
+TOTAL_TIME=1034.584
+NR_GENERATIONS=1
+NR_RIGHT_COMPILATIONS=1
+NR_FAILLING_COMPILATIONS=null
+NR_ERRONEOUS_VARIANCES=null
+NR_FAILING_VALIDATION_PROCESS=null
+OUTPUT_STATUS=STOP_BY_PATCH_FOUND
+
+Patch stats:
+
+Patch 1
+VARIANT_ID=2
+TIME=1034
+VALIDATION=|true|0|2952|[]|
+GENERATION=1
+FOLDER_SOLUTION_CODE=/script/jGenProg_Defects4J_Math_50/./output_astor/AstorMain-Math-50//src//variant-2
+--Patch Hunk #1
+OPERATOR=RemoveOp
+
+LOCATION=org.apache.commons.math.analysis.solvers.BaseSecantSolver
+
+PATH=/script/jGenProg_Defects4J_Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java
+
+MODIFIED_FILE_PATH=/script/jGenProg_Defects4J_Math_50/./output_astor/AstorMain-Math-50//src//variant-2/org/apache/commons/math/analysis/solvers/BaseSecantSolver.java
+
+LINE=188
+
+SUSPICIOUNESS=0.707
+
+MP_RANKING=0
+
+ORIGINAL_CODE=x0 = 0.5 * ((x0 + x1) - org.apache.commons.math.util.FastMath.max(rtol * org.apache.commons.math.util.FastMath.abs(x1), atol))
+
+BUGGY_CODE_TYPE=CtAssignmentImpl|CtBlockImpl
+
+PATCH_HUNK_CODE=null
+
+PATCH_HUNK_TYPE=null
+
+INGREDIENT_SCOPE=-
+
+INGREDIENT_PARENT=null
+
+PATCH_DIFF_ORIG=--- /script/jGenProg_Defects4J_Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolverjava
++++ /script/jGenProg_Defects4J_Math_50/src/main/java/org/apache/commons/math/analysis/solvers/BaseSecantSolverjava
+@@ -184,10 +184,10 @@
+ 						break;
+ 					case REGULA_FALSI :
+ 
+-						if (x == x1) {
+-							x0 = 0.5 * ((x0 + x1) - org.apache.commons.math.util.FastMath.max(rtol * org.apache.commons.math.util.FastMath.abs(x1), atol));
++						if (x == x1)
++
+ 							f0 = computeObjectiveValue(x0);
+-						}
++
+ 						break;
+ 					default :
+ 
+
+
+
+[INFO ] fr.inria.main.evolution.AstorMain.run(AstorMain.java:208) - Time Total(s): 1420.31
+
+
+Node: 9e71216aabff
+
+
+
+Date: Sun Dec  1 21:18:36 EST 2019
+
+cd /script/jGenProg_Defects4J_Math_50;
+export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8 -Duser.language=en-US -Duser.country=US -Duser.language=en";
+TZ="America/New_York"; export TZ;
+export PATH="/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/:$PATH";
+export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64/bin/";
+java -Xmx4048m -cp /script/libs/jtestex7.jar:/astor/target/astor-0.0.2-SNAPSHOT-jar-with-dependencies.jar fr.inria.main.evolution.AstorMain \
+	-mode jgenprog \
+	-location . \
+	-id Math-50 \
+	-failing org.apache.commons.math.analysis.solvers.RegulaFalsiSolverTest \
+	-jvm4testexecution /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/ \
+	-jvm4evosuitetestexecution /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/ \
+	-maxgen 1000000 \
+	-maxtime 120 \
+	-stopfirst true \
+	-seed 0 \
+	-scope package \
+	-population 1 \
+	-javacompliancelevel 5 \
+	-srcjavafolder src/main/java/ \
+	-srctestfolder src/test/java/ \
+	-binjavafolder target/classes/ \
+	-bintestfolder target/test-classes/ \
+	-parameters mode:purpose \
+	-dependencies /script/jGenProg_Defects4J_Math_50/target/classes/:/script/jGenProg_Defects4J_Math_50/target/test-classes/:/defects4j/framework/projects/lib/junit-4.11.jar;
+	echo "\n\nNode: `hostname`\n";
+	echo "\n\nDate: `date`\n";
+
