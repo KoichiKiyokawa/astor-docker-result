@@ -1,0 +1,22 @@
+/bin/sh: 2: cd: can't cd to /script/jGenProg_Defects4J_Lang_66
+Traceback (most recent call last):
+  File "/script/runner/local/LocalRunner.py", line 42, in run
+    task.run()
+  File "/script/runner/RepairTask.py", line 27, in run
+    return self.tool.repair(self)
+  File "/script/core/repair_tools/Astor.py", line 34, in repair
+    classpath = bug.classpath(repair_task)
+  File "/script/core/Bug.py", line 58, in classpath
+    return self.benchmark.classpath(repair_task)
+  File "/script/core/benchmarks/Defects4J.py", line 163, in classpath
+    libs_split = subprocess.check_output(cmd, shell=True).split(":")
+  File "/usr/lib/python2.7/subprocess.py", line 573, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command 'export PATH="/defects4j/framework/bin:$PATH";
+        cd /script/jGenProg_Defects4J_Lang_66;
+        defects4j export -p cp.test 2> /dev/null;
+        ' returned non-zero exit status 1
+Command 'export PATH="/defects4j/framework/bin:$PATH";
+        cd /script/jGenProg_Defects4J_Lang_66;
+        defects4j export -p cp.test 2> /dev/null;
+        ' returned non-zero exit status 1
