@@ -1,10 +1,32 @@
 Determine revision date.................................................... OK
 Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.country=US -Duser.language=en
-[INFO] 00:54:05,097 fr.inria.astor.core.setup.ProjectConfiguration:282 - Version of the JVM used: 1.7.0_181
-[INFO] 00:54:05,103 main:381 - Java version of the JDK used to run tests: 1.7.0_181
-[INFO] 00:54:05,103 main:382 - The compliance of the JVM is:  7
-[INFO] 00:54:05,105 main:660 - command line arguments: [-mode  jgenprog  -location  .  -id  Math-27  -failing  org.apache.commons.math3.fraction.FractionTest  -jvm4testexecution  /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/  -jvm4evosuitetestexecution  /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/  -maxgen  1000000  -maxtime  120  -stopfirst  true  -seed  0  -scope  package  -population  1  -javacompliancelevel  5  -srcjavafolder  src/main/java/  -srctestfolder  src/test/java/  -binjavafolder  target/classes/  -bintestfolder  target/test-classes/  -parameters  mode:purpose  -dependencies  /script/jGenProg_Defects4J_Math_27/target/classes/:/script/jGenProg_Defects4J_Math_27/target/test-classes/:/defects4j/framework/projects/lib/junit-4.11.jar]
-[INFO] 00:54:05,115 fr.inria.main.evolution.AstorMain:224 - Running Astor on a JDK at /usr/lib/jvm/java-8-openjdk-amd64/jre
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException:  (No such file or directory)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.RollingFileAppender.setFile(RollingFileAppender.java:207)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.apache.log4j.Logger.getLogger(Logger.java:117)
+	at fr.inria.astor.core.setup.ConfigurationProperties.<clinit>(ConfigurationProperties.java:16)
+	at fr.inria.main.AbstractMain.<clinit>(AbstractMain.java:100)
+2019-12-07 11:18:41,313 INFO fr.inria.astor.core.setup.ProjectConfiguration - Version of the JVM used: 1.7.0_181
+2019-12-07 11:18:41,323 INFO main - Java version of the JDK used to run tests: 1.7.0_181
+2019-12-07 11:18:41,324 INFO main - The compliance of the JVM is:  7
+2019-12-07 11:18:41,330 INFO main - command line arguments: [-mode  jgenprog  -location  .  -id  Math-27  -failing  org.apache.commons.math3.fraction.FractionTest  -jvm4testexecution  /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/  -jvm4evosuitetestexecution  /usr/lib/jvm/java-1.7.0-openjdk-amd64/bin/  -maxgen  1000000  -maxtime  120  -stopfirst  true  -seed  0  -scope  package  -population  1  -javacompliancelevel  5  -srcjavafolder  src/main/java/  -srctestfolder  src/test/java/  -binjavafolder  target/classes/  -bintestfolder  target/test-classes/  -parameters  mode:purpose  -dependencies  /script/jGenProg_Defects4J_Math_27/target/classes/:/script/jGenProg_Defects4J_Math_27/target/test-classes/:/defects4j/framework/projects/lib/junit-4.11.jar]
+2019-12-07 11:18:41,336 INFO fr.inria.main.evolution.AstorMain - Running Astor on a JDK at /usr/lib/jvm/java-8-openjdk-amd64/jre
 [INFO ] fr.inria.main.AbstractMain.determineSourceFolders(AbstractMain.java:975) - Source folders: [/script/jGenProg_Defects4J_Math_27/./src/main/java]
 [INFO ] fr.inria.main.AbstractMain.determineSourceFolders(AbstractMain.java:994) - Source Test folders: [/script/jGenProg_Defects4J_Math_27/./src/test/java]
 [INFO ] fr.inria.main.evolution.AstorMain.createEngine(AstorMain.java:108) - mode is Purpose
@@ -120,8 +142,8 @@ Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.c
 [INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:214) - Test failt: org.apache.commons.math3.stat.correlation.CovarianceTest#testInsufficientData
 [INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:226) - Gzoltar Test Result Total:3995, fails: 106, GZoltar suspicious 27998, with positive susp 4389
 [INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:234) - nr test results 3995
-[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:289) - Gzoltar found: 856 with susp > 0.1, we consider: 856
-[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.calculateSuspicious(AstorCoreEngine.java:898) - Setting up the max to 5344330 milliseconds (5344 sec)
+[INFO ] fr.inria.astor.core.faultlocalization.gzoltar.GZoltarFaultLocalization.searchSuspicious(GZoltarFaultLocalization.java:289) - Gzoltar found: 854 with susp > 0.1, we consider: 854
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.calculateSuspicious(AstorCoreEngine.java:898) - Setting up the max to 6047370 milliseconds (6047 sec)
 [INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initPopulation(AstorCoreEngine.java:709) - 
 ---- Creating spoon model
 [INFO ] fr.inria.astor.core.manipulation.MutationSupporter.buildSpoonModel(MutationSupporter.java:240) - Creating model,  Code location from working folder: /script/jGenProg_Defects4J_Math_27/./src/main/java
@@ -129,7 +151,7 @@ Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.c
 [INFO ] fr.inria.astor.core.manipulation.MutationSupporter.buildModel(MutationSupporter.java:82) - Classpath (Dependencies) for building SpoonModel: [/script/jGenProg_Defects4J_Math_27/target/classes/, /script/jGenProg_Defects4J_Math_27/target/test-classes/, /defects4j/framework/projects/lib/junit-4.11.jar]
 [INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initModel(AstorCoreEngine.java:779) - Number of CtTypes created: 587
 [INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.initPopulation(AstorCoreEngine.java:713) - 
----- Initial suspicious size: 856
+---- Initial suspicious size: 854
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.InsideFinder, methodName=recurseSides(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V, lineNumber=105, susp=0.14569287935358963]
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.InsideFinder, methodName=recurseSides(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V, lineNumber=108, susp=0.14569287935358963]
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.InsideFinder, methodName=recurseSides(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V, lineNumber=111, susp=0.14569287935358963]
@@ -172,8 +194,6 @@ Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.c
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.optimization.general.DummyOptimizer, methodName=doOptimize()Lorg/apache/commons/math3/optimization/PointVectorValuePair;, lineNumber=321, susp=0.13736056394868904]
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.SubHyperplane$SplitSubHyperplane, methodName=getPlus()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;, lineNumber=119, susp=0.1142908976639189]
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.SubHyperplane$SplitSubHyperplane, methodName=getMinus()Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;, lineNumber=126, susp=0.1142908976639189]
-[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.RetryRunner$1, methodName=evaluate()V, lineNumber=70, susp=0.11215443081840887]
-[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.RetryRunner$1, methodName=evaluate()V, lineNumber=72, susp=0.11215443081840887]
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.RetryRunner$1, methodName=evaluate()V, lineNumber=77, susp=0.11215443081840887]
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.InsideFinder, methodName=recurseSides(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V, lineNumber=62, susp=0.10126355123567275]
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.InsideFinder, methodName=recurseSides(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V, lineNumber=63, susp=0.10126355123567275]
@@ -189,7 +209,7 @@ Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.c
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.InsideFinder, methodName=recurseSides(Lorg/apache/commons/math3/geometry/partitioning/BSPTree;Lorg/apache/commons/math3/geometry/partitioning/SubHyperplane;)V, lineNumber=134, susp=0.10126355123567275]
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.InsideFinder, methodName=plusFound()Z, lineNumber=140, susp=0.10126355123567275]
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createModificationPoints(ProgramVariantFactory.java:223) -  Not ctClass for suspicious code Candidate [className=org.apache.commons.math3.geometry.partitioning.InsideFinder, methodName=minusFound()Z, lineNumber=147, susp=0.10126355123567275]
-[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createProgramInstance(ProgramVariantFactory.java:134) - Total suspicious from FL: 856,  273
+[INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createProgramInstance(ProgramVariantFactory.java:134) - Total suspicious from FL: 854,  273
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createProgramInstance(ProgramVariantFactory.java:143) - Total ModPoint created: 273
 [INFO ] fr.inria.astor.core.solutionsearch.population.ProgramVariantFactory.createInitialPopulation(ProgramVariantFactory.java:82) - Creating program variant #1, [Variant id: 1, #gens: 273, #ops: 0, parent:-]
 [INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.setFitnessOfPopulation(AstorCoreEngine.java:754) - The original fitness is : 1.0
@@ -213,7 +233,7 @@ Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.c
 [INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:regressionforfaultlocalization= true
 [INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:collectonlyusedmethod= false
 [INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:preservelinenumbers= true
-[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:tmax2= 5344330
+[INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:tmax2= 6047370
 [INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:tmax1= 10000
 [INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:probagenmutation= false
 [INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:69) - p:nomodificationconvergence= 100
@@ -310,55 +330,55 @@ Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8 -Duser.language=en-US -Duser.c
 [INFO ] fr.inria.astor.core.setup.ConfigurationProperties.print(ConfigurationProperties.java:71) - ----------------------------
 [INFO ] fr.inria.astor.core.solutionsearch.EvolutionarySearchEngine.startEvolution(EvolutionarySearchEngine.java:40) - 
 ----Starting Solution Search
-01:40:57.370 [main] INFO  org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
-01:40:58.952 [main] INFO  org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for NativeOps: 6
-01:40:59.746 [main] INFO  org.nd4j.nativeblas.Nd4jBlas - Number of threads used for BLAS: 6
-01:40:59.753 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
-01:40:59.753 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Cores: [48]; Memory: [3.5GB];
-01:40:59.753 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Blas vendor: [MKL]
-01:41:00.291 [main] INFO  o.d.m.e.loader.WordVectorSerializer - Projected memory use for model: [3.96 MB]
-01:41:03.449 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
-01:41:03.450 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
-01:41:03.462 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
-01:44:05.457 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
-01:44:05.458 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
-01:44:05.459 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
-01:45:26.490 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
-01:45:26.491 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
-01:45:26.492 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
-01:46:15.625 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
-01:46:15.626 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
-01:46:15.627 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
-01:46:28.354 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
-01:46:28.354 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
-01:46:28.355 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
-01:47:24.366 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
-01:47:24.367 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
-01:47:24.368 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
-01:47:48.188 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
-01:47:48.189 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
-01:47:48.190 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
-01:48:33.277 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
-01:48:33.278 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
-01:48:33.279 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
-01:50:24.809 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
-01:50:24.810 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
-01:50:24.812 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+12:05:31.146 [main] INFO  org.nd4j.linalg.factory.Nd4jBackend - Loaded [CpuBackend] backend
+12:05:32.620 [main] INFO  org.nd4j.nativeblas.NativeOpsHolder - Number of threads used for NativeOps: 6
+12:05:33.414 [main] INFO  org.nd4j.nativeblas.Nd4jBlas - Number of threads used for BLAS: 6
+12:05:33.423 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Backend used: [CPU]; OS: [Linux]
+12:05:33.424 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Cores: [48]; Memory: [3.5GB];
+12:05:33.424 [main] INFO  o.n.l.a.o.e.DefaultOpExecutioner - Blas vendor: [MKL]
+12:05:33.962 [main] INFO  o.d.m.e.loader.WordVectorSerializer - Projected memory use for model: [3.96 MB]
+12:05:36.756 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+12:05:36.757 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+12:05:36.767 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+12:08:37.064 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+12:08:37.064 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+12:08:37.066 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+12:09:53.849 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+12:09:53.850 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+12:09:53.852 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+12:10:41.442 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+12:10:41.443 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+12:10:41.445 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+12:10:53.248 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+12:10:53.249 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+12:10:53.250 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+12:11:47.872 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+12:11:47.873 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+12:11:47.875 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+12:12:10.758 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+12:12:10.759 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+12:12:10.761 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+12:12:52.713 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+12:12:52.714 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+12:12:52.716 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
+12:14:39.321 [main] INFO  o.d.m.s.SequenceVectors - Building learning algorithms:
+12:14:39.322 [main] INFO  o.d.m.s.SequenceVectors -           building SequenceLearningAlgorithm: [PV-DBOW]
+12:14:39.323 [main] INFO  o.d.m.s.SequenceVectors -           building ElementsLearningAlgorithm: [SkipGram]
 [INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.belowMaxTime(AstorCoreEngine.java:278) - 
  No more time for operating
-[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:170) - Time Repair Loop (s): 7204.162
-[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:172) - generationsexecuted: 1234
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:170) - Time Repair Loop (s): 7203.123
+[INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.atEnd(AstorCoreEngine.java:172) - generationsexecuted: 1295
 [INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.printFinalStatus(AstorCoreEngine.java:247) - 
 ----SUMMARY_EXECUTION---
 [INFO ] fr.inria.astor.core.solutionsearch.AstorCoreEngine.printFinalStatus(AstorCoreEngine.java:257) - End Repair Search: NOT Found solution
-[INFO ] fr.inria.main.evolution.AstorMain.run(AstorMain.java:208) - Time Total(s): 9959.239
+[INFO ] fr.inria.main.evolution.AstorMain.run(AstorMain.java:208) - Time Total(s): 9958.518
 
 
-Node: 05206d9109d6
+Node: d85994d4b8e3
 
 
 
-Date: Tue Dec  3 03:40:05 EST 2019
+Date: Sat Dec  7 14:04:40 EST 2019
 
 cd /script/jGenProg_Defects4J_Math_27;
 export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF8 -Duser.language=en-US -Duser.country=US -Duser.language=en";
